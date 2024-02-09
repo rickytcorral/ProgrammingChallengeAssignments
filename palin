@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class PalindromeChecker {
+
+   public static void main(String[] args) {
+      Scanner scanner = new Scanner(System.in);
+      System.out.print("Enter a string: ");
+      String input = scanner.nextLine();
+      scanner.close();
+
+      // Remove any non-alphanumeric characters and convert to lowercase
+      String cleanedInput = input.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+
+      // Check if the cleaned string is equal to its reverse
+      String reversedInput = new StringBuilder(cleanedInput).reverse().toString();
+      boolean isPalindrome = cleanedInput.equals(reversedInput);
+
+      // Print the result
+      System.out.println("Is the string a palindrome? " + isPalindrome);
+   }
+}
