@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class SumOfIntegers {
+
+   public static void main(String[] args) {
+      Scanner scanner = new Scanner(System.in);
+      int num, sum = 0;
+
+      System.out.print("Enter integers (type 'done' when finished): ");
+
+      while (true) {
+         if (scanner.hasNextInt()) {
+            num = scanner.nextInt();
+            sum += num;
+         } else if (scanner.hasNext("done")) {
+            System.out.println("The sum of the integers is: " + sum);
+            break;
+         } else {
+            System.out.println("Invalid input, try again!");
+            scanner.next();
+         }
+      }
+
+      scanner.close();
+   }
+}
