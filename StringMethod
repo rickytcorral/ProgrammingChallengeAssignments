@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class StringOperations {
+
+   public static void main(String[] args) {
+      Scanner scanner = new Scanner(System.in);
+      System.out.print("Enter a string: ");
+      String input = scanner.nextLine();
+      scanner.close();
+
+      // 1. Find and print the length of the string
+      System.out.println("Length of the string: " + input.length());
+
+      // 2. Convert the string to uppercase and print it
+      System.out.println("Uppercase: " + input.toUpperCase());
+
+      // 3. Convert the string to lowercase and print it
+      System.out.println("Lowercase: " + input.toLowerCase());
+
+      // 4. Print the first character of the string
+      System.out.println("First character: " + input.charAt(0));
+
+      // 5. Print the last character of the string
+      System.out.println("Last character: " + input.charAt(input.length() - 1));
+
+      // 6. Print the substring starting from the second character to the fifth character of the string
+      System.out.println("Substring: " + input.substring(1, 5));
+   }
+}
